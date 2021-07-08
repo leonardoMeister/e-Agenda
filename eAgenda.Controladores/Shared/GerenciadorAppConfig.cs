@@ -41,30 +41,18 @@ namespace eAgenda.Controladores.Shared
             conexao.ConnectionString = ConfigurationManager.ConnectionStrings["asdasd"].ConnectionString;
             return conexao;
         }
-        /// <summary>
-        /// Altera o AppConfig para conter DBSelecionado SqLite
-        /// </summary>
-        public static void MudarBancoParaSqlite()
+
+        public static void GravarConfiguracao(string chave, string valor)
         {
             Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            config.AppSettings.Settings.Remove(chave);
+            config.Save();
+            config.AppSettings.Settings.Add(chave, valor);
+            config.Save();
 
-            config.AppSettings.Settings.Remove("DBSelecionado");
-            config.AppSettings.Settings.Add("DBSelecionado", "SqLite");
-
-            config.Save(ConfigurationSaveMode.Modified, true);
+            ConfigurationManager.RefreshSection("appSettings");
         }
-        /// <summary>
-        /// Altera o AppConfig para conter DBSelecionado SqlServer
-        /// </summary>
-        public static void MudarBancoParaSqlServer()
-        {
-            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
-            config.AppSettings.Settings.Remove("DBSelecionado");
-            config.AppSettings.Settings.Add("DBSelecionado", "SqlServer");
-
-            config.Save(ConfigurationSaveMode.Modified, true);
-        }
         /// <summary>
         /// Obtem o banco selecionado do AppConfig DBSelecionado
         /// </summary>
