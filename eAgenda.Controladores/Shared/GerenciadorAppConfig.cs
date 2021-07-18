@@ -13,10 +13,7 @@ namespace eAgenda.Controladores.Shared
         /// <returns>Retorna uma conexao do Tipo DbConnection</returns>
         public static DbConnection EstabelecerConexaoDbSelecionado()
         {
-            if (ConfigurationManager.AppSettings["DBSelecionado"] == "SqlServer")
-            {
-                return EstabelecerConexaoSQLServer();
-            }
+            if (ConfigurationManager.AppSettings["DBSelecionado"] == "SqlServer") return EstabelecerConexaoSQLServer();
             else if (ConfigurationManager.AppSettings["DBSelecionado"] == "SqLite") return EstabelecerConexaoSQLite();
 
             return null;

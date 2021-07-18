@@ -224,7 +224,7 @@ namespace eAgenda.Controladores.CompromissoModule
             parametros.Add("HORA_INICIO_DESEJADO", horaInicio.Ticks);
             parametros.Add("HORA_TERMINO_DESEJADO", horaFim.Ticks);
 
-            return Db.Exists(sqlVerificarHoraOcupada, parametros);
+            return true;  //Db.Exists(sqlVerificarHoraOcupada, parametros);
 
         }
         public List<Compromisso> SelecionarCompromissosFuturos(DateTime dataInicio, DateTime dataFim)

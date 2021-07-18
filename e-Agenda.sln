@@ -19,6 +19,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "eAgenda.Database", "eAgenda
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "eAgenda.Database.SqLite", "eAgenda.Database.SqLite\eAgenda.Database.SqLite.sqlproj", "{18C5C70B-F123-4B51-BC73-D26C61AF751C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eAgenda.WindowsFormsApp", "eAgenda.WindowsFormsApp\eAgenda.WindowsFormsApp.csproj", "{E8DBC380-95EE-4984-ADE5-07D0046C35CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{18C5C70B-F123-4B51-BC73-D26C61AF751C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18C5C70B-F123-4B51-BC73-D26C61AF751C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{18C5C70B-F123-4B51-BC73-D26C61AF751C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E8DBC380-95EE-4984-ADE5-07D0046C35CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8DBC380-95EE-4984-ADE5-07D0046C35CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8DBC380-95EE-4984-ADE5-07D0046C35CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8DBC380-95EE-4984-ADE5-07D0046C35CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{253FEBBF-95A4-48E2-B674-EDAD74125571} = {309CE5CD-B2E3-4194-AD2A-C1F2A8F2AF04}
 		{3B8B8B5F-4424-4DE8-8D16-77B8B9030CF0} = {3A72012A-312E-4137-A68B-097766890510}
 		{18C5C70B-F123-4B51-BC73-D26C61AF751C} = {3A72012A-312E-4137-A68B-097766890510}
+		{E8DBC380-95EE-4984-ADE5-07D0046C35CD} = {3A72012A-312E-4137-A68B-097766890510}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B9B1C5A-F0CC-4ECD-A32E-9E5C73E50DE1}

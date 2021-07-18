@@ -7,6 +7,10 @@ namespace eAgenda.Dominio.CompromissoModule
 {
     public class Compromisso : EntidadeBase, IEquatable<Compromisso>
     {        
+        public Compromisso()
+        {
+
+        }
         public Compromisso(string assunto, string local, string link, DateTime data,
             TimeSpan horaInicio, TimeSpan horaFim, Contato contato)
         {
@@ -18,7 +22,10 @@ namespace eAgenda.Dominio.CompromissoModule
             HoraTermino = horaFim;
             Contato = contato;
         }
-
+        public override string ToString()
+        {
+            return $"Compromisso {Id}, Assunto {Assunto}, Data {Data.ToShortDateString()}";
+        }
         public string Assunto { get; }
         public string Local { get; }
         public string Link { get; }

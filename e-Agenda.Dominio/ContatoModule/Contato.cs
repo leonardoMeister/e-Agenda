@@ -15,7 +15,10 @@ namespace eAgenda.Dominio.ContatoModule
             Empresa = empresa;
             Cargo = cargo;
         }
-
+        public override string ToString()
+        {
+            return $"Contato {Id}, Nome {Nome}, Telefone {Telefone}";
+        }
         public string Nome { get; }
         public string Email { get; }
         public string Telefone { get; }

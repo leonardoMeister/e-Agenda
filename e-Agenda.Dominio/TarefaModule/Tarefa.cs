@@ -12,7 +12,10 @@ namespace eAgenda.Dominio.TarefaModule
             DataCriacao = dataCriacao.Date;
             Prioridade = new Prioridade(prioridade);            
         }
-
+        public override string ToString()
+        {
+            return $"Tarefa {Id}, Titulo {Titulo}, {Prioridade}";
+        }
 
         public string Titulo { get; }
 
